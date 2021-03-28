@@ -1,0 +1,26 @@
+import random
+#Customisable number answers. Alternate code is random.randrange(a,b+1)
+answer= random.randint(0,10)
+#max number of tries for player
+limit=3
+guess_try=0
+not_won=True
+print('Welcome to guessing game! You have 3 Tries to guess the correct number.')
+#Game ends when either player has exceeded the guess limit or won the game
+while guess_try<limit and not_won:
+
+    guess=int(input("Guess a number from 0-10 inclusive:"))
+    if isinstance(guess,int):
+        guess_try+=1
+        if guess==answer:
+            print("Congratulations, you have guessed correctly! The answer is %d"%answer)
+            not_won=False
+        else:
+            print("Incorrect guess")
+            print("You have {} tries remaining".format(limit-guess_try))
+
+    else:
+        print("Your guess needs to be an integer")
+
+if guess_try==limit:
+    print("You have lost the game")
