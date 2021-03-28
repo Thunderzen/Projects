@@ -1,5 +1,5 @@
 import random
-#Customisable number answers. Alternate code is random.randrange(a,b+1)
+#Customisable number answers. Alternative code is random.randrange(a,b+1)
 answer= random.randint(0,10)
 #max number of tries for player
 limit=3
