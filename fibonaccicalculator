@@ -1,0 +1,27 @@
+#Welcome to Fibonacci calculator
+# The Fibonacci Sequence is the sequence of numbers, obtained by addition of the previous 2 terms
+# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+  
+
+#Created using a recursive function
+#2 types of recursion,namely tail and non-tail recursions
+#Tail recursion-function calls itself at the end in which no computation is done after the return of the recursive call
+
+
+# Pattern observations:
+# Fibonacci(1)-->Returns 0
+# Fibonacci(2)-->Returns 1
+# Fibonacci(3)-->Returns 1, Finonacci(3-1)+Fibonacci(3-2)
+# Fibonacci(4)-->Returns Fibonacci(4-1)+Fibonacci(4-2)
+# Fibonacci(5)-->Returns Fibonacci(5-1)+Fibonacci(5-2)
+
+
+
+def fibonacci(term):
+    #term=1 and 2 are base cases
+    if term==1:
+        return 0
+    elif term==2:
+        return 1
+    else:
+        return fibonacci(term-1)+fibonacci(term-2)
